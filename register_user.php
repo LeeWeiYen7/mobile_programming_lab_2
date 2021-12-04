@@ -3,10 +3,9 @@ include_once("dbconnect.php");
 $name = $_POST['name'];
 $email = $_POST['email'];
 $password = $_POST['passowrd'];
-$phone = $_POST['phone'];
-$otp = rand(1000,9999);
 
-$sqlregister = "INSERT INTO USER(NAME,EMAIL,PASSWORD,PHONE,OTP) VALUES('$name','$email','$password','$phone','$otp')";
+
+$sqlregister = "INSERT INTO USER(NAME,EMAIL,PASSWORD,) VALUES('$name','$email','$password')";
 
 if(mysqli_query($conn,$sqlregister)){
     sendEmail($otp,$email);
