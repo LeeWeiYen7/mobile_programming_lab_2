@@ -8,7 +8,7 @@
     $result = $conn->query($sql);
     if($result->num_rows > 0){
         $sqlupdate = "UPDATE USER SET OTP = '0' WHERE EMAIL = '$email' AND OTP = '$otp'";
-        if($conn->query($sqlupdate) === TRUE){
+        if($conn->query($sqlupdate) == TRUE){
             echo 'success';
         }else{
             echo 'failed';
